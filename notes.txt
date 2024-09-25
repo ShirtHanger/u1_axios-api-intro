@@ -1,0 +1,46 @@
+============================================================
+APIs -
+    Data on web servers available for public use
+============================================================
+
+APIs pull data from the web for use in our website!
+
+We can create, read, update, or remove data with API and such. For today, we work with READ.
+
+POST request == Create data
+GET request == Read data
+PUT request == Update data
+DELETE request == Delete data (whoa! who knew!?!)
+
+-------------------------------------------------------
+
+On web browsers, client (My computer) requests 
+    * The URL endpoint - (Where we go)  
+    * HTTP method - (How we get there)
+    * Headers - (Login, username, admine privileges, important info) 
+    * And body - (Page content)
+
+The server will read the request, and send a response:
+    * Status code - (Whether or not it's possible, and why)
+    * Headers - (Your privileges)
+    * Body - (The page content)
+        Header includes the lack of privileges, body includes the error page itself containing status code
+
+
+
+============================================================
+Axios -
+    JavaScript library that allows HTTP  requests
+============================================================
+
+/* An Axios object, Basic Axios HTTP request */
+
+axios({
+    url: 'http://www.yourserver.com/api/neat_stuff',
+    method: 'post',
+    headers: {
+      'content-type': 'multipart/form-data'
+    },
+    data: form
+})
+
